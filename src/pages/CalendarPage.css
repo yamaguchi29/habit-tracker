@@ -1,0 +1,98 @@
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  background: white;
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.weekday-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding-bottom: 0.75rem;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.calendar-day.blank {
+  background: transparent;
+}
+
+.day-number {
+  z-index: 1;
+}
+
+/* Heatmap Levels - Teal based */
+.level-0 {
+  background-color: #f1f5f9; /* Slate 100 */
+  color: #94a3b8;
+}
+
+.level-1 {
+  background-color: #ccfbf1; /* Teal 100 */
+  color: #0d9488;
+}
+
+.level-2 {
+  background-color: #5eead4; /* Teal 300 */
+  color: white;
+}
+
+.level-3 {
+  background-color: var(--primary-color); /* Teal 600 */
+  color: white;
+}
+
+.calendar-day.today {
+  border: 2px solid var(--primary-color);
+}
+
+.calendar-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  justify-content: flex-end;
+  padding: 0 0.5rem;
+}
+
+.legend-item {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}

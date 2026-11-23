@@ -1,0 +1,94 @@
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.summary-card {
+  background: white;
+  padding: 1rem 0.75rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.summary-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.chart-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.range-tabs {
+  display: flex;
+  background: #f1f5f9;
+  padding: 0.25rem;
+  border-radius: 8px;
+  gap: 0.25rem;
+}
+
+.range-tab {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.range-tab.active {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.chart-wrapper {
+  margin-left: -1rem; /* Adjust for charts' Y-axis padding */
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.recharts-wrapper, 
+.recharts-wrapper *,
+.recharts-surface,
+.recharts-surface * {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Explicitly target the SVG and its parent if browser persists focus ring */
+svg:focus {
+  outline: none !important;
+}

@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 習慣データ：自分のデータのみ操作可能
+    match /habits/{habitId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // FCMトークン：自分のサブコレクションのみ操作可能
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      match /fcmTokens/{tokenId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--surface-hover);
+  background: var(--surface-color);
+}
+
+.logout-btn {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.logout-btn:hover {
+  color: var(--danger-color);
+}
+
+.main-content {
+  padding: 1rem 1rem 0; /* Removing large padding, using spacer instead */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-spacer {
+  height: 160px; /* High enough to clear the 70px nav and 64px FAB */
+  width: 100%;
+  flex-shrink: 0;
+}

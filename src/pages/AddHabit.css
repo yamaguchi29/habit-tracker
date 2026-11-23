@@ -1,0 +1,148 @@
+.add-habit-page {
+  padding: 1.5rem;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.add-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.add-header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.back-btn {
+  color: var(--text-primary);
+  padding: 0.5rem;
+  background: var(--bg-color);
+  border-radius: 12px;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-section label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.text-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--bg-color);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+}
+
+.days-selector {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.day-btn {
+  flex: 1;
+  padding: 0.75rem 0;
+  background: var(--bg-color);
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.day-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.icon-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.icon-btn {
+  height: 60px;
+  background: var(--bg-color);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.icon-btn.active {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.save-submit-btn {
+  background: linear-gradient(135deg, var(--primary-color), #2dd4bf);
+  color: white;
+  padding: 1.1rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 16px rgba(13, 148, 136, 0.2);
+  width: 100%;
+}
+
+.save-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #ef4444;
+  padding: 0.8rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1.5px solid #fee2e2;
+  transition: all 0.2s;
+}
+
+.delete-btn:active {
+  background: #fef2f2;
+}

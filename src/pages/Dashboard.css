@@ -1,0 +1,122 @@
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.habit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.habit-grid-card {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.habit-grid-card:active {
+  transform: scale(0.97);
+}
+
+.habit-grid-card.done {
+  background: var(--primary-light);
+  border-color: rgba(13, 148, 136, 0.1);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.habit-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-color);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.habit-grid-card.done .habit-icon-wrapper {
+  background: white;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.edit-habit-btn {
+  color: #94a3b8;
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-habit-btn:hover {
+  background: #f1f5f9;
+  color: var(--primary-color);
+}
+
+.check-icon {
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.check-icon.active {
+  color: var(--primary-color);
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.habit-grid-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.habit-grid-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-secondary);
+}

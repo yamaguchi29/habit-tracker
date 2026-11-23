@@ -1,0 +1,96 @@
+.habit-calendar {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: 12px;
+  border: 1px solid var(--surface-hover);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.cal-month-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.cal-nav-btn {
+  padding: 0.25rem;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cal-nav-btn:hover {
+  background: var(--surface-hover);
+  color: var(--primary-color);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.weekdays {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.days .cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.cal-day.empty {
+  visibility: hidden;
+}
+
+.cal-day.completed-day {
+  background: var(--success-color);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.cal-day.today {
+  border: 2px solid var(--primary-color);
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.cal-day.today.completed-day {
+  border: 2px solid #047857; /* Darker emerald for contrast */
+  color: white;
+}
